@@ -5,12 +5,12 @@ const xObject = JSON.parse(x)
 const hashMap = xObject || [
 	{ logo: 'A', url: 'https://www.acfun.cn' },
 	{ logo: 'B', url: 'https://www.bilibili.com' },
+	{ logo: 'D', URL: 'https://www.dangdang.com' },
 	{ logo: 'G', URL: 'https://www.google.com' },
 	{ logo: 'G', URL: 'https://www.github.com' },
 ]
 const simplifyUrl = (url) => {
-	return url
-		.replace('https://', '')
+	return url.replace('https://', '')
 		.replace('http://', '')
 		.replace('www.', '')
 		.replace(/\/.*/, '')
@@ -68,8 +68,3 @@ $(document).on('keypress', (e) => {
 		}
 	}
 })
-
-//---------------------------------------------------------------------------------------//
-// const hashMap = {} //parcel 会默认在我们的列表里加一个作用域,所以没办法查看全局变量
-// window.hashMap = {}
-// 	const { key } = e //如果变量名和属性名是一样的即const key =e.key就可以简写成const {key}=e
